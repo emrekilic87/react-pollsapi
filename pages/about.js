@@ -1,17 +1,17 @@
 import Layout from "../components/layout";
 import Head from 'next/head'
 
-function HomePage() {
+function AboutPage() {
   return (
     <Layout>
       <Head>
-        <title>Home Page</title>
+        <title>About Page</title>
       </Head>
-      <div className="home-page">
-        <h2>Home</h2>  
+      <div className="about-page">
+        <h2>About</h2>  
       </div>
     </Layout>
   );
 }
 
-export default HomePage;
+export default AboutPage;
