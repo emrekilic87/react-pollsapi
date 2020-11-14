@@ -1,5 +1,6 @@
 import Layout from "../components/layout";
 import Head from 'next/head'
+import css from './Home.module.css'
 
 function HomePage() {
   return (
@@ -7,7 +8,7 @@ function HomePage() {
       <Head>
         <title>Home Page</title>
       </Head>
-      <div className="home-page">
+      <div className={css.home_page}>
         <h2>Home</h2>  
       </div>
     </Layout>
