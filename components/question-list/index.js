@@ -1,4 +1,5 @@
 import css from "./Question_list.module.css";
+import Link from "next/link";
 
 function QuestionList({ data }) {
   return (
@@ -6,19 +7,14 @@ function QuestionList({ data }) {
       <ul className={css.list}>
         {data.map((item) => (
           <li className={css.list_item} key={item.url}>
-            <div className={css.title_area}>
-              <span className={css.title}>{item.question}</span>
-              <span className={css.date}>
-                ({new Date(item.published_at).toLocaleString()})
-              </span>
-            </div>
-            <div className={css.choice_area}>
-              {item.choices.map((i, index) => (
-                <div className={css.choice} key={index}>
-                  * {i.choice} ({i.votes})
-                </div>
-              ))}
-            </div>
+            <Link href={item.url}>
+              <a className={css.title_area}>
+                <span className={css.title}>{item.question}</span>
+                <span className={css.date}>
+                  ({new Date(item.published_at).toLocaleString()})
+                </span>
+              </a>
+            </Link>
           </li>
         ))}
       </ul>

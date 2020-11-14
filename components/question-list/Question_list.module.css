@@ -23,6 +23,7 @@
 
 .title_area {
   margin-bottom: 7px;
+  color: #000;
 }
 
 .title_area .date {
@@ -34,16 +35,4 @@
   font-weight: bold;
   margin-right: 5px;
   font-size: 16px;
-}
-
-.choice_area .choice {
-  margin-bottom: 5px;
-  text-transform: capitalize;
-  font-size: 14px;
-}
-
-@media only screen and (max-width: 768px) {
-  .title_area .date {
-    display: block;
-  }
 }

@@ -1,0 +1,47 @@
+.list_item {
+  font-size: 18px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+.title_area {
+  margin-bottom: 7px;
+  color: #000;
+}
+
+.title_area .title {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.title_area .date {
+  text-align: center;
+  font-size: 12px;
+}
+
+.choice_area {
+  margin-top: 15px;
+  background-color: #000000;
+}
+
+.choice_area .choice {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  font-size: 16px;
+  padding: 20px 10px;
+  width: 285px;
+  color: #000000;
+  background-color: #72ffc8;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .title_area .title {
+    font-size: 16px;
+    text-align: center;
+  }
+}
