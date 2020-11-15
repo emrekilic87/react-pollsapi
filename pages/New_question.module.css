@@ -1,0 +1,15 @@
+.new_question_page{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.input_area,
+.add_choice_area{
+  margin-bottom: 15px;
+}
+
+.input{
+  padding: 5px 15px;
+}

@@ -13,6 +13,10 @@ function Header() {
         <Link href="/about">
           <a className={css.link}>ABOUT</a>
         </Link>
+
+        <Link href="/new-question">
+          <a className={css.link}>NEW QUESTION</a>
+        </Link>
       </nav>
     </div>
   );
