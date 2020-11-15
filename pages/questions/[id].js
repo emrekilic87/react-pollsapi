@@ -21,6 +21,21 @@ export async function getStaticProps({ params }) {
   };
 }
 
+export async function vote(e) {
+  let choice_id = parseInt(e.target.getAttribute("data-ind")) + 1;
+  let voted = parseInt(e.target.getAttribute("data-value"));
+  for (var i = 0; i < e.target.childNodes.length; i++) {
+    if (e.target.childNodes[i].className == "votes") {
+      e.target.childNodes[i].innerText = `(${voted + 1})`;
+      break;
+    }
+  }
+  e.target.setAttribute("data-value", voted + 1);
+
+  let question_id = document.URL.split('/')[4].toString();
+  await fetch(`https://polls.apiblueprint.org/questions/${question_id}/choices/${choice_id}`);
+}
+
 function DetailPage({ data }) {
   return (
     <Layout>
@@ -36,9 +51,15 @@ function DetailPage({ data }) {
         </div>
         <div className={css.choice_area}>
           {data.choices.map((item, index) => (
-            <div className={css.choice} key={index}>
+            <div
+              onClick={vote}
+              data-value={item.votes}
+              data-ind={index}
+              className={css.choice}
+              key={index}
+            >
               {item.choice}
-              <span className={css.votes}>({item.votes})</span>
+              <span className="votes">({item.votes})</span>
             </div>
           ))}
         </div>
