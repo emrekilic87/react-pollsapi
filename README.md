@@ -1,7 +1,9 @@
-# react-pollsapi
-# This project is build with Next.js
-# System Requirements (Node.js 10.13 or later.)
-# npm install
-# npm run dev
-# http://localhost:3000/
-# Demo: https://react-pollsapi.vercel.app/
+This free api has been used in this project >> https://apiblueprint.org/
+<br>
+<br>
+Tech stacks;
+* Next.js
+* Node.js 10.13 or later
+* CSS Module
+<br>
+Demo: https://react-pollsapi.vercel.app/
